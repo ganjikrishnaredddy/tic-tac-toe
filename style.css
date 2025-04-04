@@ -2,92 +2,98 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background: linear-gradient(120deg, #8e44ad, #c0392b);
-    color: #fff;
+    background-color: brown;
+    color: white;
     text-align: center;
-    min-height: 100vh;
+    padding: 20px;
 }
 
-h2 {
-    font-size: 3rem;
-    margin: 2rem 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #f1c40f;
-    text-shadow: 2px 2px 4px #000;
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .container {
-    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 60vh;
 }
 
 .game {
-    height: 70vh;
-    width: 70vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5vmin;
-    padding: 1rem;
-    background-color: #2c3e50;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 90vmin;
+    max-width: 400px;
+    margin: auto;
 }
 
 .box {
-    height: 18vmin;
-    width: 18vmin;
-    border-radius: 15px;
-    font-size: 9vmin;
-    background-color: #ecf0f1;
-    color: #2c3e50;
+    height: 25vmin;
+    max-height: 120px;
+    font-size: 8vmin;
+    max-font-size: 50px;
+    border-radius: 12px;
     border: none;
     cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s;
 }
 
 .box:hover {
-    transform: scale(1.05);
-    background-color: #f39c12;
+    background-color: #e6e6e6;
 }
 
 #resetbtn,
 #newbtn {
-    padding: 1rem 2rem;
-    font-size: 1.3rem;
-    background-color: #27ae60;
-    border-radius: 25px;
-    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin-top: 20px;
+    background-color: black;
     color: white;
-    margin-top: 1.5rem;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 #resetbtn:hover,
 #newbtn:hover {
-    background-color: #2ecc71;
+    background-color: #444;
 }
 
 .message {
-    margin-top: 2rem;
+    margin-bottom: 20px;
 }
 
-#msg {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #f1c40f;
-    text-shadow: 1px 1px 3px #000;
+.message p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .hide {
     display: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    .box {
+        height: 28vmin;
+        font-size: 10vmin;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    #resetbtn,
+    #newbtn {
+        width: 100%;
+    }
 }
