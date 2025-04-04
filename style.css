@@ -10,10 +10,11 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
+    min-height: 100vh;
 }
 
 main h2 {
-    font-size: 2rem;
+    font-size: 5vw;
     margin-bottom: 20px;
 }
 
@@ -27,40 +28,43 @@ main h2 {
 .game {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 90vmin;
+    gap: 4vw;
+    width: 90vw;
     max-width: 400px;
     margin: auto;
 }
 
 .box {
-    height: 25vmin;
+    width: 26vw;
+    height: 26vw;
+    max-width: 120px;
     max-height: 120px;
-    font-size: 8vmin;
+    font-size: 10vw;
     max-font-size: 50px;
-    border-radius: 12px;
+    border-radius: 15px;
     border: none;
     cursor: pointer;
     background-color: white;
     color: black;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .box:hover {
-    background-color: #e6e6e6;
+    background-color: #ddd;
 }
 
 #resetbtn,
 #newbtn {
-    padding: 12px 24px;
-    font-size: 1rem;
-    margin-top: 20px;
+    padding: 1rem 2rem;
+    font-size: 4vw;
+    max-width: 300px;
     background-color: black;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 80vw;
 }
 
 #resetbtn:hover,
@@ -73,27 +77,10 @@ main h2 {
 }
 
 .message p {
-    font-size: 1.5rem;
+    font-size: 5vw;
     margin-bottom: 10px;
 }
 
 .hide {
     display: none;
-}
-
-/* Responsive tweaks */
-@media (max-width: 480px) {
-    .box {
-        height: 28vmin;
-        font-size: 10vmin;
-    }
-
-    main h2 {
-        font-size: 1.5rem;
-    }
-
-    #resetbtn,
-    #newbtn {
-        width: 100%;
-    }
 }
