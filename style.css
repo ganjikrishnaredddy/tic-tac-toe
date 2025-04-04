@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #8e44ad, #c0392b);
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f1c40f;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 70vh;
+    width: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5vmin;
+    padding: 1rem;
+    background-color: #2c3e50;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 15px;
+    font-size: 9vmin;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    background-color: #f39c12;
+}
+
+#resetbtn,
+#newbtn {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    background-color: #27ae60;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resetbtn:hover,
+#newbtn:hover {
+    background-color: #2ecc71;
+}
+
+.message {
+    margin-top: 2rem;
+}
+
+#msg {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f1c40f;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.hide {
+    display: none;
+}
